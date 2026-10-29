@@ -1,3 +1,6 @@
+
+[![CI](https://github.com/baobabitogether-a11y/commit-canvas-changelog/actions/workflows/ci.yml/badge.svg)](https://github.com/baobabitogether-a11y/commit-canvas-changelog/actions/workflows/ci.yml)
+
 # Minimal Supabase Page
 
 A one-page site that reads rows from a Supabase table.
