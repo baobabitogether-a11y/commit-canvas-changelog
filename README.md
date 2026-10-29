@@ -4,7 +4,7 @@ A one-page site that reads rows from a Supabase table.
 
 ## Setup: GitHub Actions + Vercel + Supabase
 
-1. **Supabase** — create a project at https://supabase.com/ and run the SQL migrations from `supabase/migrations/` in the SQL editor. Copy your project URL and publishable (anon) key from **Settings → API**.
+1. **Supabase** — create a project at https://supabase.com/ and create a `messages` table (columns: `id uuid`, `body text`, `created_at timestamptz`). Copy your project URL and publishable (anon) key from **Settings → API**.
 
 2. **GitHub** — push this repo to GitHub. In **Settings → Secrets and variables → Actions**, add:
    - `SUPABASE_URL` — your project URL
