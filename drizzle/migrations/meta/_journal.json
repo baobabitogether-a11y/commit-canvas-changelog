@@ -8,6 +8,13 @@
       "when": 1793252883817,
       "tag": "0000_create_messages",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793255072479,
+      "tag": "0001_public_insert_messages",
+      "breakpoints": true
     }
   ]
 }

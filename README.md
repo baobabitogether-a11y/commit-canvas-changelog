@@ -45,3 +45,22 @@ npm i
 npm run dev
 ```
 
+
+## GitHub secrets (quick)
+
+Repo → **Settings → Secrets and variables → Actions → New repository secret**. Add `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` (from Supabase **Settings → API**). The workflow reads them as `${{ secrets.NAME }}`.
+
+## Switching between Supabase servers
+
+Each server is just a URL + publishable key. Use GitHub **Environments** (Settings → Environments, e.g. `staging`, `production`), each with its own secrets, and add `environment: production` to the job. In Vercel, set different values per Production / Preview environment.
+
+## Migrating DB data
+
+```sh
+# schema + data from old server
+pg_dump "$OLD_DB_URL" --schema=public --no-owner > dump.sql
+# into new server
+psql "$NEW_DB_URL" -f dump.sql
+```
+
+DB URLs are in Supabase **Settings → Database → Connection string**. Or use the Supabase CLI: `supabase db dump --data-only`.
