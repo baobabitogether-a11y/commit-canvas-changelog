@@ -23,8 +23,8 @@ A one-page site that reads rows from a Supabase table.
          - uses: actions/setup-node@v4
            with:
              node-version: 20
-         - run: npm ci
-         - run: npm run build
+         - run: bun install
+         - run: bun run build
            env:
              VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
              VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
